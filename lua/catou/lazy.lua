@@ -27,5 +27,7 @@ require("lazy").setup({
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",
 
+    "github/copilot.vim",
+
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 })
