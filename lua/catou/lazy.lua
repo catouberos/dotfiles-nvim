@@ -27,6 +27,10 @@ require("lazy").setup({
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",
 
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+
     "github/copilot.vim",
 
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
