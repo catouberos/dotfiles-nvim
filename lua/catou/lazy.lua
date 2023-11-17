@@ -12,29 +12,43 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  -- treesitter
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+  -- package manager
+  "williamboman/mason.nvim",
 
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/nvim-cmp",
+  -- lsp
+  "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
 
-    "hrsh7th/cmp-vsnip",
-    "hrsh7th/vim-vsnip",
+  -- completion
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-path",
+  "hrsh7th/cmp-cmdline",
+  "hrsh7th/nvim-cmp",
 
-    "nvim-lua/plenary.nvim",
-    { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+  -- snippet
+  { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
+  "saadparwaiz1/cmp_luasnip",
 
-    "github/copilot.vim",
+  -- linter
+  "mfussenegger/nvim-lint",
 
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  -- formatter
+  "mhartington/formatter.nvim",
 
-    -- java
-    "mfussenegger/nvim-jdtls"
+  -- telescope
+  "nvim-lua/plenary.nvim",
+  { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+  },
+
+  "github/copilot.vim",
+
+  -- color theme
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })
