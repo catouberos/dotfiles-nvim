@@ -13,10 +13,6 @@ require("formatter").setup({
     -- and will be executed in order
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
-    lua = {
-      require("formatter.filetypes.lua").stylua,
-    },
-
     javascript = {
       require("formatter.filetypes.javascript").prettier,
     },
@@ -25,18 +21,16 @@ require("formatter").setup({
       require("formatter.filetypes.typescript").prettier,
     },
 
+    typescriptreact = {
+      require("formatter.filetypes.typescriptreact").prettier,
+    },
+
     vue = {
       require("formatter.filetypes.vue").prettier,
     },
 
     java = {
       require("formatter.filetypes.java").clangformat,
-    },
-
-    ["*"] = {
-      -- "formatter.filetypes.any" defines default configurations for any
-      -- filetype
-      require("formatter.filetypes.any"),
     },
   },
 })

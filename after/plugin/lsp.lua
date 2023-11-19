@@ -23,3 +23,7 @@ require("lspconfig").gopls.setup({
 require("lspconfig").volar.setup({
   capabilities = capabilities,
 })
+
+require("lspconfig").tailwindcss.setup({
+  capabilities = capabilities,
+})

@@ -47,6 +47,10 @@ require("lazy").setup({
     build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
   },
 
+  -- tree
+  "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons",
+
   "github/copilot.vim",
 
   -- color theme
